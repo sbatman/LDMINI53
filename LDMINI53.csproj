@@ -18,6 +18,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Content\GetSource.png" />
+    <Content Include="Content\Graphics\Backgrounds\clouds1.png" />
+    <Content Include="Content\Graphics\Backgrounds\clouds2.png" />
+    <Content Include="Content\Graphics\Backgrounds\clouds3.png" />
     <Content Include="Content\Graphics\BootLoadBar.jpg" />
     <Content Include="Content\PoweredBy.png" />
     <Content Include="index.html" />
@@ -27,6 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Game.ts" />
+    <TypeScriptCompile Include="GameClasses\Background.ts" />
     <TypeScriptCompile Include="Libs\phaser.d.ts" />
     <TypeScriptCompile Include="States\Boot.ts" />
     <TypeScriptCompile Include="States\Mainmenu.ts" />

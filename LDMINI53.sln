@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDMINI53", "LDMINI53.csproj", "{660401AB-F293-495E-8604-FE9C69381373}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsocketServer", "WebsocketServer\WebsocketServer.csproj", "{A1EE86AE-A6C1-43DF-A1B2-D69C62B6D47B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{660401AB-F293-495E-8604-FE9C69381373}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{660401AB-F293-495E-8604-FE9C69381373}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{660401AB-F293-495E-8604-FE9C69381373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1EE86AE-A6C1-43DF-A1B2-D69C62B6D47B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1EE86AE-A6C1-43DF-A1B2-D69C62B6D47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1EE86AE-A6C1-43DF-A1B2-D69C62B6D47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1EE86AE-A6C1-43DF-A1B2-D69C62B6D47B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

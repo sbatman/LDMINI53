@@ -12,11 +12,10 @@
         {
             super(window.innerWidth, window.innerHeight, Phaser.AUTO, 'content', null);
             this.state.add('Boot', BootState, false);
-            this.state.add('Preloader', PreloadState, false);
+            this.state.add('Preload', PreloadState, false);
             this.state.add('Mainmenu', MainmenuState, false);
-            //  this.state.add('Level', LevelState, false);
 
-            // this.state.start('Boot');
+            this.state.start('Boot');
         }
     }
 }
