@@ -16,10 +16,16 @@ var LDMINI53;
         };
 
         BootState.prototype.create = function () {
-            this.input.maxPointers = 1;
-            this.stage.disableVisibilityChange = false;
+            this.game.input.maxPointers = 1;
+            this.game.stage.disableVisibilityChange = false;
             this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
             this.game.state.start('Preload', true, false);
+            this.game.world.width = 10000;
+            this.game.world.height = 10000;
+            this.game.camera.bounds.width = this.game.world.width;
+            this.game.camera.bounds.height = this.game.world.height;
+            this.game.scale.forceOrientation(true, false);
+            this.game.scale.setScreenSize(true);
         };
         return BootState;
     })(Phaser.State);

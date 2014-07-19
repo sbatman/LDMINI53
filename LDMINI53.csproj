@@ -18,14 +18,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Content\GetSource.png" />
+    <Content Include="Content\Graphics\Arena.png" />
+    <Content Include="Content\Graphics\Backgrounds\clouds1.jpg" />
     <Content Include="Content\Graphics\Backgrounds\clouds1.png" />
     <Content Include="Content\Graphics\Backgrounds\clouds2.png" />
     <Content Include="Content\Graphics\Backgrounds\clouds3.png" />
     <Content Include="Content\Graphics\BootLoadBar.jpg" />
+    <Content Include="Content\Graphics\Player.png" />
     <Content Include="Content\PoweredBy.png" />
     <Content Include="index.html" />
     <Content Include="Libs\phaser.js" />
     <Content Include="Libs\phaser.min.js" />
+    <Content Include="Libs\screenfull.js" />
     <Content Include="Main.js" />
     <Content Include="web.config" />
   </ItemGroup>
@@ -34,6 +38,7 @@
     <TypeScriptCompile Include="GameClasses\Background.ts" />
     <TypeScriptCompile Include="Libs\phaser.d.ts" />
     <TypeScriptCompile Include="States\Boot.ts" />
+    <TypeScriptCompile Include="States\Level.ts" />
     <TypeScriptCompile Include="States\Mainmenu.ts" />
     <TypeScriptCompile Include="States\Preload.ts" />
   </ItemGroup>

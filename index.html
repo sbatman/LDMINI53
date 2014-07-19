@@ -10,7 +10,7 @@
                 (i[r].q = i[r].q || []).push(arguments);
             }, i[r].l = 1 * new Date();
             a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
+                m = s.getElementsByTagName(o)[0];
             a.async = 1;
             a.src = g;
             m.parentNode.insertBefore(a, m);
@@ -20,11 +20,28 @@
         ga('send', 'pageview');
 
     </script>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes">
     <script src="Libs/phaser.min.js"> </script>
+    <script src="Libs/screenfull.js"> </script>
     <script src="Main.js"> </script>
+    <script>
+        function GoFullScreen() {
+            screenfull.request();
+            if (navigator.userAgent.match(/Android/i)) {
+                window.scrollTo(0, 1);
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
-    <div id="content" style="left: 0; position: absolute; top: 0;"></div>
+    <div id="content"></div>
     <div id="source" style="position: absolute; right: 0; top: 0;"><a href="https://github.com/sbatman/LDMINI50"><img src="Content/GetSource.png" /></a></div>
     <div id="source" style="bottom: 0; position: absolute; right: 0;"><a href="http://phaser.io/"><img src="Content/PoweredBy.png" /></a></div>
 </body>
