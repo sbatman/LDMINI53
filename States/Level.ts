@@ -79,7 +79,7 @@
 
             this.HighScoreText = new Phaser.Text(this.game, 10, 10, "Score     :", { font: "18px Arial", fill: "#F15A24", stroke: '#000000', strokeThickness: 3 });
             this.ScoreText = new Phaser.Text(this.game, 10, 30, "HighScore :", { font: "18px Arial", fill: "#F15A24", stroke: '#000000', strokeThickness: 3 });
-            this.HelpText = new Phaser.Text(this.game, 10, this.game.canvas.height - 20, "Click and Drag the Green block, avoid the orange ones. Simple!", { font: "12px Arial", fill: "#F15A24", stroke: '#000000', strokeThickness: 3 });
+            this.HelpText = new Phaser.Text(this.game, 10, this.game.canvas.height - 20, "Click and Drag the Green block, avoid the orange ones. Simple!, Soundtrack by knarmahfox", { font: "12px Arial", fill: "#F15A24", stroke: '#000000', strokeThickness: 3 });
             this.ScoreText.fixedToCamera = true;
             this.HighScoreText.fixedToCamera = true;
             this.HelpText.fixedToCamera = true;
