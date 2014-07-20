@@ -6,8 +6,9 @@
 };
 var LDMINI53;
 (function (LDMINI53) {
+    var instanceOfGame;
     window.onload = function () {
-        var instanceOfGame = new LDMINI53.Game();
+        instanceOfGame = new LDMINI53.Game();
     };
 
     var Game = (function (_super) {
@@ -17,7 +18,7 @@ var LDMINI53;
             this.state.add('Boot', LDMINI53.BootState, false);
             this.state.add('Preload', LDMINI53.PreloadState, false);
             this.state.add('Mainmenu', LDMINI53.MainmenuState, false);
-
+            this.state.add('Level', LDMINI53.LevelState, false);
             this.state.start('Boot');
         }
         return Game;

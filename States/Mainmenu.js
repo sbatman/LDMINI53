@@ -16,10 +16,12 @@ var LDMINI53;
 
         MainmenuState.prototype.create = function () {
             this.BackgroundLayer = new LDMINI53.Background(this.game);
+            this.BackgroundLayer.Dispose();
+            this.game.state.start('Level', true, false);
         };
 
-        MainmenuState.prototype.Update = function () {
-            this.BackgroundLayer.Update();
+        MainmenuState.prototype.update = function () {
+            this.BackgroundLayer.update();
         };
         return MainmenuState;
     })(Phaser.State);

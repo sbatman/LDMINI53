@@ -1,8 +1,10 @@
 ﻿module LDMINI53
 {
+    var instanceOfGame;
     window.onload = () =>
     {
-        var instanceOfGame = new LDMINI53.Game();
+        instanceOfGame = new LDMINI53.Game();
+    
     };
 
     export class Game extends Phaser.Game
@@ -14,7 +16,7 @@
             this.state.add('Boot', BootState, false);
             this.state.add('Preload', PreloadState, false);
             this.state.add('Mainmenu', MainmenuState, false);
-
+            this.state.add('Level', LevelState, false);
             this.state.start('Boot');
         }
     }

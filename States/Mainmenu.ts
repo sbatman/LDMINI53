@@ -2,21 +2,23 @@
 {
     export class MainmenuState extends Phaser.State
     {
-        BackgroundLayer : Background;
+        BackgroundLayer: Background;
 
         preload()
         {
-        
+
         }
 
         create()
         {
             this.BackgroundLayer = new Background(this.game);
+            this.BackgroundLayer.Dispose();
+            this.game.state.start('Level', true, false);
         }
 
-        Update()
+        update()
         {
-            this.BackgroundLayer.Update();
+            this.BackgroundLayer.update();
         }
     }
 

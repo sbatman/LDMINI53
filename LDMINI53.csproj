@@ -17,23 +17,32 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Content\Audio\Music.mp3" />
     <Content Include="Content\GetSource.png" />
+    <Content Include="Content\Graphics\Arena.png" />
+    <Content Include="Content\Graphics\Avoid.png" />
+    <Content Include="Content\Graphics\Backgrounds\clouds1.jpg" />
     <Content Include="Content\Graphics\Backgrounds\clouds1.png" />
     <Content Include="Content\Graphics\Backgrounds\clouds2.png" />
     <Content Include="Content\Graphics\Backgrounds\clouds3.png" />
     <Content Include="Content\Graphics\BootLoadBar.jpg" />
+    <Content Include="Content\Graphics\Enemy.png" />
+    <Content Include="Content\Graphics\Player.png" />
     <Content Include="Content\PoweredBy.png" />
     <Content Include="index.html" />
     <Content Include="Libs\phaser.js" />
     <Content Include="Libs\phaser.min.js" />
+    <Content Include="Libs\screenfull.js" />
     <Content Include="Main.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Game.ts" />
     <TypeScriptCompile Include="GameClasses\Background.ts" />
+    <TypeScriptCompile Include="GameClasses\Enemy.ts" />
     <TypeScriptCompile Include="Libs\phaser.d.ts" />
     <TypeScriptCompile Include="States\Boot.ts" />
+    <TypeScriptCompile Include="States\Level.ts" />
     <TypeScriptCompile Include="States\Mainmenu.ts" />
     <TypeScriptCompile Include="States\Preload.ts" />
   </ItemGroup>
@@ -47,9 +56,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\Audio\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -67,7 +74,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3451</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:3451/</IISUrl>
+          <IISUrl>http://localhost:3452/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
