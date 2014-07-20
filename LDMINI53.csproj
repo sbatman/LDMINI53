@@ -24,6 +24,7 @@
     <Content Include="Content\Graphics\Backgrounds\clouds2.png" />
     <Content Include="Content\Graphics\Backgrounds\clouds3.png" />
     <Content Include="Content\Graphics\BootLoadBar.jpg" />
+    <Content Include="Content\Graphics\Enemy.png" />
     <Content Include="Content\Graphics\Player.png" />
     <Content Include="Content\PoweredBy.png" />
     <Content Include="index.html" />
@@ -36,6 +37,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="Game.ts" />
     <TypeScriptCompile Include="GameClasses\Background.ts" />
+    <TypeScriptCompile Include="GameClasses\Enemy.ts" />
     <TypeScriptCompile Include="Libs\phaser.d.ts" />
     <TypeScriptCompile Include="States\Boot.ts" />
     <TypeScriptCompile Include="States\Level.ts" />
@@ -72,7 +74,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3451</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:3451/</IISUrl>
+          <IISUrl>http://localhost:3452/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

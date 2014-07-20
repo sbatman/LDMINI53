@@ -13,7 +13,8 @@
             this.load.image("content-graphics-backgrounds-clouds2", "Content/Graphics/Backgrounds/clouds2.png");
             this.load.image("content-graphics-backgrounds-clouds3", "Content/Graphics/Backgrounds/clouds3.png");
             this.load.image("content-graphics-arena", "Content/Graphics/Arena.png");
-            this.load.image("content-graphics-player", "Content/Graphics/player.png");
+            this.load.image("content-graphics-player", "Content/Graphics/Player.png");
+            this.load.image("content-graphics-enemy", "Content/Graphics/Enemy.png");
             //load spritesheets
           
             //load all audio            
