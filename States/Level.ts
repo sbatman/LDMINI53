@@ -5,7 +5,7 @@
         public static ArenaWidth: number = 1024;
         public static ArenaHeight: number = 720;
         public static CurrentLevel: LevelState;
-        
+
         Enemys: Array<Enemy>;
 
         BackgroundLayer: Background;
@@ -13,8 +13,9 @@
         PlayerGraphic: Phaser.Sprite;
         AvoidSprite: Phaser.Sprite;
 
-        HighScoreText:Phaser.Text;
+        HighScoreText: Phaser.Text;
         ScoreText: Phaser.Text;
+        HelpText: Phaser.Text;
 
         HighScore: number = 0;
         LevelCount: number;
@@ -27,9 +28,12 @@
         CameraXVelo: number = 0.3;
         CameraYVelo: number = 0.5;
 
+        SoundTrack: Phaser.Sound;
+
         preload()
         {
-
+            if (this.SoundTrack == null) this.SoundTrack = this.add.audio('content-audio-music', 0.1, true);
+            if (!this.SoundTrack.isPlaying) this.SoundTrack.play();
         }
 
 
@@ -52,8 +56,7 @@
         create()
         {
             this.HighScore = parseFloat(this.readCookie('hiScore'));
-            if (isNaN(this.HighScore))
-                this.HighScore = 0;
+            if (isNaN(this.HighScore)) this.HighScore = 0;
             LevelState.CurrentLevel = this;
             this.Enemys = new Array();
             this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -62,6 +65,7 @@
             this.Score = 0;
             this.BackgroundLayer = new LDMINI53.Background(this.game);
             this.AvoidSprite = new Phaser.Sprite(this.game, 0, 0, "content-graphics-avoid");
+            this.AvoidSprite.y = (this.game.canvas.height * 0.5) - (this.AvoidSprite.height * 0.5);
             this.AvoidSprite.fixedToCamera = true;
             this.ArenaGraphic = new Phaser.Sprite(this.game, 2000, 2000, "content-graphics-arena");
             this.PlayerGraphic = new Phaser.Sprite(this.game, 2000 + (LevelState.ArenaWidth * 0.5), 2000 + (LevelState.ArenaHeight * 0.5), "content-graphics-player");
@@ -75,10 +79,13 @@
 
             this.HighScoreText = new Phaser.Text(this.game, 10, 10, "Score     :", { font: "18px Arial", fill: "#F15A24", stroke: '#000000', strokeThickness: 3 });
             this.ScoreText = new Phaser.Text(this.game, 10, 30, "HighScore :", { font: "18px Arial", fill: "#F15A24", stroke: '#000000', strokeThickness: 3 });
+            this.HelpText = new Phaser.Text(this.game, 10, this.game.canvas.height - 20, "Click and Drag the Green block, avoid the orange ones. Simple!", { font: "12px Arial", fill: "#F15A24", stroke: '#000000', strokeThickness: 3 });
             this.ScoreText.fixedToCamera = true;
             this.HighScoreText.fixedToCamera = true;
+            this.HelpText.fixedToCamera = true;
             this.game.add.existing(this.ScoreText);
             this.game.add.existing(this.HighScoreText);
+            this.game.add.existing(this.HelpText);
 
             this.game.camera.focusOnXY(2000 + (LevelState.ArenaWidth * 0.5), 2000 + (LevelState.ArenaHeight * 0.5));
             for (var i = 0; i < 40; i++)

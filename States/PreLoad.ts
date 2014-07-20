@@ -19,6 +19,7 @@
             //load spritesheets
           
             //load all audio            
+            this.load.audio('content-audio-music', 'Content/Audio/Music.mp3');
 
             //  Set-up our preloader sprite
             this.preloadBar = this.add.sprite((window.innerWidth / 2) - 200, (window.innerHeight / 2) - 20, 'content-graphics-BootLoadBar');

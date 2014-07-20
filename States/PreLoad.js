@@ -20,6 +20,8 @@ var LDMINI53;
             this.load.image("content-graphics-enemy", "Content/Graphics/Enemy.png");
             this.load.image("content-graphics-avoid", "Content/Graphics/Avoid.png");
 
+            this.load.audio('content-audio-music', 'Content/Audio/Music.mp3');
+
             this.preloadBar = this.add.sprite((window.innerWidth / 2) - 200, (window.innerHeight / 2) - 20, 'content-graphics-BootLoadBar');
             this.load.setPreloadSprite(this.preloadBar);
 

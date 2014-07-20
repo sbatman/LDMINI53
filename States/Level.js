@@ -15,9 +15,12 @@ var LDMINI53;
             this.CameraY = 2000;
             this.CameraXVelo = 0.3;
             this.CameraYVelo = 0.5;
-            this.Score = 0;
         }
         LevelState.prototype.preload = function () {
+            if (this.SoundTrack == null)
+                this.SoundTrack = this.add.audio('content-audio-music', 0.1, true);
+            if (!this.SoundTrack.isPlaying)
+                this.SoundTrack.play();
         };
 
         LevelState.prototype.readCookie = function (name) {
@@ -46,6 +49,7 @@ var LDMINI53;
             this.Score = 0;
             this.BackgroundLayer = new LDMINI53.Background(this.game);
             this.AvoidSprite = new Phaser.Sprite(this.game, 0, 0, "content-graphics-avoid");
+            this.AvoidSprite.y = (this.game.canvas.height * 0.5) - (this.AvoidSprite.height * 0.5);
             this.AvoidSprite.fixedToCamera = true;
             this.ArenaGraphic = new Phaser.Sprite(this.game, 2000, 2000, "content-graphics-arena");
             this.PlayerGraphic = new Phaser.Sprite(this.game, 2000 + (LevelState.ArenaWidth * 0.5), 2000 + (LevelState.ArenaHeight * 0.5), "content-graphics-player");
@@ -54,15 +58,18 @@ var LDMINI53;
 
             this.game.add.existing(this.ArenaGraphic);
             this.game.add.existing(this.PlayerGraphic);
-
+            this.game.add.existing(this.AvoidSprite);
             this.game.physics.enable(this.PlayerGraphic);
 
             this.HighScoreText = new Phaser.Text(this.game, 10, 10, "Score     :", { font: "18px Arial", fill: "#F15A24", stroke: '#000000', strokeThickness: 3 });
             this.ScoreText = new Phaser.Text(this.game, 10, 30, "HighScore :", { font: "18px Arial", fill: "#F15A24", stroke: '#000000', strokeThickness: 3 });
+            this.HelpText = new Phaser.Text(this.game, 10, this.game.canvas.height - 20, "Click and Drag the Green block, avoid the orange ones. Simple!", { font: "12px Arial", fill: "#F15A24", stroke: '#000000', strokeThickness: 3 });
             this.ScoreText.fixedToCamera = true;
             this.HighScoreText.fixedToCamera = true;
+            this.HelpText.fixedToCamera = true;
             this.game.add.existing(this.ScoreText);
             this.game.add.existing(this.HighScoreText);
+            this.game.add.existing(this.HelpText);
 
             this.game.camera.focusOnXY(2000 + (LevelState.ArenaWidth * 0.5), 2000 + (LevelState.ArenaHeight * 0.5));
             for (var i = 0; i < 40; i++) {
@@ -102,9 +109,6 @@ var LDMINI53;
         LevelState.prototype.PlayerHitByEnemy = function (obj1, obj2) {
             LevelState.CurrentLevel.dispose();
             LevelState.CurrentLevel.game.state.start('Level', true, false);
-        };
-
-        LevelState.prototype.render = function () {
         };
 
         LevelState.prototype.dispose = function () {
