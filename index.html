@@ -26,14 +26,6 @@
     <script src="Libs/phaser.min.js"> </script>
     <script src="Libs/screenfull.js"> </script>
     <script src="Main.js"> </script>
-    <script>
-        function GoFullScreen() {
-            screenfull.request();
-            if (navigator.userAgent.match(/Android/i)) {
-                window.scrollTo(0, 1);
-            }
-        }
-    </script>
     <style>
         body {
             background-color: black;
@@ -41,7 +33,7 @@
     </style>
 </head>
 <body>
-    <div id="content"></div>
+    <div id="content" style="left: 0; position: absolute; top: 0;"></div>
     <div id="source" style="position: absolute; right: 0; top: 0;"><a href="https://github.com/sbatman/LDMINI53"><img src="Content/GetSource.png" /></a></div>
     <div id="source" style="bottom: 0; position: absolute; right: 0;"><a href="http://phaser.io/"><img src="Content/PoweredBy.png" /></a></div>
 </body>

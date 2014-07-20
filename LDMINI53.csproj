@@ -19,6 +19,7 @@
   <ItemGroup>
     <Content Include="Content\GetSource.png" />
     <Content Include="Content\Graphics\Arena.png" />
+    <Content Include="Content\Graphics\Avoid.png" />
     <Content Include="Content\Graphics\Backgrounds\clouds1.jpg" />
     <Content Include="Content\Graphics\Backgrounds\clouds1.png" />
     <Content Include="Content\Graphics\Backgrounds\clouds2.png" />

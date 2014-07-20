@@ -15,6 +15,7 @@
             this.load.image("content-graphics-arena", "Content/Graphics/Arena.png");
             this.load.image("content-graphics-player", "Content/Graphics/Player.png");
             this.load.image("content-graphics-enemy", "Content/Graphics/Enemy.png");
+            this.load.image("content-graphics-avoid", "Content/Graphics/Avoid.png");
             //load spritesheets
           
             //load all audio            

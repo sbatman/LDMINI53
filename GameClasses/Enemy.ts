@@ -9,15 +9,16 @@
         constructor(game: Phaser.Game, x: number, y: number, speedMultiplier: number)
         {
             super(game, x, y, 'content-graphics-enemy');
+            this.SpeedMultiplier = speedMultiplier;
             this.Spawn();
             this.game.add.existing(this);
             this.anchor.setTo(0.5, 0.5);
-            this.SpeedMultiplier = speedMultiplier;
+            game.physics.enable(this);
         }
 
         Spawn()
         {
-            var speed = 0.5 + ((Math.random()) * this.SpeedMultiplier) ;
+            var speed =2 + ((Math.random()) * this.SpeedMultiplier) ;
             var side = Math.floor(Math.random() * 4);
             var posX;
             var posY;
@@ -60,5 +61,6 @@
             if (this.x > 4100) this.Spawn();
             if (this.y > 3780) this.Spawn();
         }
+
     }
 }
