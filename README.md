@@ -3,7 +3,7 @@ LDMINI53
 
 Description
 --------
-TBC
+A port for the game avoid for Ludumdare mini53 : http://www.ludumdare.com/compo/minild-53/?action=preview&uid=33819
 
 Team
 --------
